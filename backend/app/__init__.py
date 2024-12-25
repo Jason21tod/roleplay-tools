@@ -3,7 +3,7 @@ import flask_socketio
 import flask_cors
 
 app = flask.Flask(__name__)
-cors = flask_cors.CORS(app, resources={r"/*": {"origins": ["https://roleplay-tools-jf3cghwr6-gian-p-nunes-projects.vercel.app/","*"]}})
+cors = flask_cors.CORS(app, resources={r"/*": {"origins": ["*"]}})
 socket_io = flask_socketio.SocketIO(app, cors_allowed_origins="*")
 
 pressed_times = 0

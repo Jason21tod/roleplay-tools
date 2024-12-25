@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
 import { io } from "socket.io-client";
 
+import './app.css';
+import './styles/reset.css'
+
+import MapContainer from './components/map_container/map_container'
+import ToggleSide from './components/toggle_side/toggle_side';
 
 
 const socket = io(process.env.REACT_APP_SERVER, {
@@ -11,9 +16,15 @@ console.log(process.env.REACT_APP_SERVER)
 
 function App() {
   return (
-    <div>
-      <ButtonTest />
-    </div>
+    <main className="app_container">
+      <section className="app_container_game">
+        <div className="player_area">
+          <MapContainer />
+          <ToggleSide/>
+        </div>
+        <ButtonTest />
+      </section>
+    </main>
   );
 }
 

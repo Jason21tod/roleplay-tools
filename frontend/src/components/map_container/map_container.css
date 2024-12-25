@@ -1,0 +1,15 @@
+.map_container {
+    background-color: rgb(0, 63, 92);
+    display: inline-block;
+    height: 70%;
+    width: 60%;
+    display: flex;
+}
+
+.map_container-col-1 {
+    flex: 1;
+}
+
+.map_container-col-2 {
+    flex: 0 0 10%;
+}

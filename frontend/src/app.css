@@ -1,0 +1,21 @@
+:root {
+    --background_default_color: rgba(92, 44, 4, 0.6);
+}
+
+.app_container {
+    height: 100vh;
+}
+
+.app_container_game {
+    height: 100%;
+    width: 100%;
+    margin-top: 2%;
+}
+
+.player_area {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    row-gap: 10px;
+    column-gap: 10px;
+} 
