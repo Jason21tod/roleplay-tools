@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { io } from "socket.io-client";
 
-// Certifique-se de usar o domínio correto do Ngrok
+
+
 const socket = io(process.env.REACT_APP_SERVER, {
-  transports: ["websocket", "polling"], // Transportes suportados
+  transports: ["websocket"],
 });
 
 console.log(process.env.REACT_APP_SERVER)

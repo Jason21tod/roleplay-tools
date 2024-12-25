@@ -3,7 +3,7 @@ import flask_socketio
 import flask_cors
 
 app = flask.Flask(__name__)
-cors = flask_cors.CORS(app, resources={r"/*": {"origins": "*"}})
+cors = flask_cors.CORS(app, resources={r"/*": {"origins": ["https://roleplay-tools-jf3cghwr6-gian-p-nunes-projects.vercel.app/","*"]}})
 socket_io = flask_socketio.SocketIO(app, cors_allowed_origins="*")
 
 pressed_times = 0
@@ -25,6 +25,6 @@ def handle_message(data):
     pressed_times += 1
     socket_io.emit("state_received", pressed_times)
 
+
 if __name__ == "__main__":
-    # Use `socket_io.run` ao invés de `app.run`
     socket_io.run(app, debug=True, host="0.0.0.0", port=5000)
